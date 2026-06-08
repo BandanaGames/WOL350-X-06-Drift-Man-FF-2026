@@ -1,0 +1,12 @@
+<footer class="site-footer">
+  <p>© {{ 'now' | date: "%Y" }} Win Or Lose 350 X 06 Drift Man. All rights reserved.</p>
+  <div class="footer-links">
+    {% for link in linklists.footer-menu.links %}
+      <a href="{{ link.url }}">{{ link.title }}</a>
+    {% endfor %}
+  </div>
+</footer>
+
+{% schema %}
+{ "name": "Footer", "settings": [], "presets": [{"name":"Footer"}] }
+{% endschema %}

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="g6" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#121214"/>
+      <stop offset="100%" stop-color="#27232b"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#g6)" />
+  <rect x="210" y="140" width="380" height="320" rx="40" fill="#131416" />
+  <path d="M 257 190 Q 400 80 543 190 L 513 430 H 287 Z" fill="#ccbe9a" opacity="0.18" />
+  <text x="400" y="130" text-anchor="middle" fill="#f6f4f1" font-size="42" font-weight="800" font-family="Inter, sans-serif">Apex Track</text>
+  <text x="400" y="540" text-anchor="middle" fill="#ccc2aa" font-size="24">Performance jacket</text>
+</svg>

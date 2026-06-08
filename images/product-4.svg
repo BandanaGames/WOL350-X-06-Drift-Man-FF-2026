@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="g4" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f0f0f"/>
+      <stop offset="100%" stop-color="#231f23"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#g4)" />
+  <rect x="210" y="140" width="380" height="320" rx="40" fill="#0d0c10" />
+  <path d="M 260 180 L 300 120 L 360 130 L 420 110 L 480 130 L 540 120 L 580 180" fill="#c3b39a" opacity="0.16" />
+  <text x="400" y="140" text-anchor="middle" fill="#f6f4f1" font-size="44" font-weight="700" font-family="Inter, sans-serif">Rogue Jacket</text>
+  <text x="400" y="540" text-anchor="middle" fill="#d5ccb2" font-size="24">Leather performance</text>
+</svg>

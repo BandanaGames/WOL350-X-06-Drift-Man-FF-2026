@@ -1,0 +1,17 @@
+<section id="music" class="section music-section">
+  <div class="section-header">
+    <h2>Music</h2>
+    <p>Listen to the soundtrack of the Win Or Lose 350 X 06 Drift Man capsule.</p>
+  </div>
+  <div class="music-player">
+    <audio controls>
+      <source src="{{ 'sample-track.mp3' | asset_url }}" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+    <p>Follow the playlist on <a href="https://open.spotify.com" target="_blank" rel="noreferrer noopener">Spotify</a>.</p>
+  </div>
+</section>
+
+{% schema %}
+{ "name": "Music", "settings": [], "presets": [{"name":"Music"}] }
+{% endschema %}

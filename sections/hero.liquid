@@ -1,0 +1,190 @@
+<section class="hero-section">
+  <div class="background-video-wrap" aria-hidden="true">
+    <video autoplay muted loop playsinline class="background-video">
+      <source src="{{ section.settings.hero_video | asset_url }}" type="video/mp4" />
+      Your browser does not support video backgrounds.
+    </video>
+    <div class="background-overlay"></div>
+    <div class="background-brand" aria-hidden="true">{{ section.settings.background_text }}</div>
+  </div>
+  <div class="hero-copy">
+    <span class="eyebrow">{{ section.settings.eyebrow_text }}</span>
+    <div class="hero-header-container">
+      <div class="hero-logo">
+        {% if section.settings.hero_logo != blank %}
+          <img src="{{ section.settings.hero_logo | image_url: width: 180 }}" alt="{{ section.settings.heading_text }}" class="hero-logo-image" />
+        {% endif %}
+      </div>
+      <h1>{{ section.settings.heading_text }}</h1>
+    </div>
+    <p>{{ section.settings.subheading_text }}</p>
+    <div class="hero-actions">
+      {% if section.settings.primary_button_text != blank %}
+        <a class="btn btn-primary" href="{{ section.settings.primary_button_link }}">{{ section.settings.primary_button_text }}</a>
+      {% endif %}
+      {% if section.settings.secondary_button_text != blank %}
+        <a class="btn btn-secondary" href="{{ section.settings.secondary_button_link }}">{{ section.settings.secondary_button_text }}</a>
+      {% endif %}
+    </div>
+    {% if section.settings.banner_link != blank %}
+    <div class="hero-banner">
+      <a class="hero-banner-link" href="{{ section.settings.banner_link }}" target="_blank" rel="noreferrer noopener">
+        <strong>{{ section.settings.banner_title }}</strong>
+        <span>{{ section.settings.banner_subtitle }}</span>
+      </a>
+    </div>
+    {% endif %}
+  </div>
+  <div class="hero-visual">
+    <div class="hero-card">
+      <span class="hero-tag">{{ section.settings.card_tag }}</span>
+      <h2>{{ section.settings.card_heading }}</h2>
+      <p>{{ section.settings.card_description }}</p>
+    </div>
+  </div>
+</section>
+
+{% stylesheet %}
+  .hero-header-container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin: 1rem 0;
+  }
+
+  .hero-logo {
+    flex-shrink: 0;
+  }
+
+  .hero-logo-image {
+    max-width: clamp(80px, 12vw, 180px);
+    height: auto;
+    display: block;
+    object-fit: contain;
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Hero",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "hero_logo",
+      "label": "Hero Logo"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow_text",
+      "label": "Eyebrow Text",
+      "default": "Luxury Street Driftwear"
+    },
+    {
+      "type": "text",
+      "id": "heading_text",
+      "label": "Heading",
+      "default": "Win Or Lose 350 X 06 Drift Man"
+    },
+    {
+      "type": "text",
+      "id": "subheading_text",
+      "label": "Subheading",
+      "default": "Founder Giddys_GFX & Brandon Quach"
+    },
+    {
+      "type": "text",
+      "id": "primary_button_text",
+      "label": "Primary Button Text",
+      "default": "Explore the Drop"
+    },
+    {
+      "type": "url",
+      "id": "primary_button_link",
+      "label": "Primary Button Link",
+      "default": "#collection"
+    },
+    {
+      "type": "text",
+      "id": "secondary_button_text",
+      "label": "Secondary Button Text",
+      "default": "Brand Story"
+    },
+    {
+      "type": "url",
+      "id": "secondary_button_link",
+      "label": "Secondary Button Link",
+      "default": "#story"
+    },
+    {
+      "type": "url",
+      "id": "banner_link",
+      "label": "Banner Link",
+      "default": "https://www.youtube.com/@briezkomstudiosTV"
+    },
+    {
+      "type": "text",
+      "id": "banner_title",
+      "label": "Banner Title",
+      "default": "Watch on YouTube"
+    },
+    {
+      "type": "text",
+      "id": "banner_subtitle",
+      "label": "Banner Subtitle",
+      "default": "briezkomstudiosTV"
+    },
+    {
+      "type": "text",
+      "id": "card_tag",
+      "label": "Card Tag",
+      "default": "Limited Edition"
+    },
+    {
+      "type": "text",
+      "id": "card_heading",
+      "label": "Card Heading",
+      "default": "Drift Man Capsule"
+    },
+    {
+      "type": "text",
+      "id": "card_description",
+      "label": "Card Description",
+      "default": "Win Or Lose 350 X 06 Drift Man signature silhouettes with premium fabrics, bold graphics, and artful details."
+    },
+    {
+      "type": "text",
+      "id": "background_text",
+      "label": "Background Text",
+      "default": "Luxury Street Driftwear"
+    },
+    {
+      "type": "text",
+      "id": "hero_video",
+      "label": "Hero Video File",
+      "default": "Acura Grand Prix Long Beach 2026_P1.mp4"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero",
+      "settings": {
+        "eyebrow_text": "Luxury Street Driftwear",
+        "heading_text": "Win Or Lose 350 X 06 Drift Man",
+        "subheading_text": "Founder Giddys_GFX & Brandon Quach",
+        "primary_button_text": "Explore the Drop",
+        "primary_button_link": "#collection",
+        "secondary_button_text": "Brand Story",
+        "secondary_button_link": "#story",
+        "banner_link": "https://www.youtube.com/@briezkomstudiosTV",
+        "banner_title": "Watch on YouTube",
+        "banner_subtitle": "briezkomstudiosTV",
+        "card_tag": "Limited Edition",
+        "card_heading": "Drift Man Capsule",
+        "card_description": "Win Or Lose 350 X 06 Drift Man signature silhouettes with premium fabrics, bold graphics, and artful details.",
+        "background_text": "Luxury Street Driftwear",
+        "hero_video": "Acura Grand Prix Long Beach 2026_P1.mp4"
+      }
+    }
+  ]
+}
+{% endschema %}
